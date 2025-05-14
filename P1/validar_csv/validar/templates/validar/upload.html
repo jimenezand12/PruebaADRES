@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Validar Archivos</title>
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-…"
+    crossorigin="anonymous"
+  >
+</head>
+<body>
+  <div class="container py-5">
+    <h1 class="mb-4">Validar archivo de texto</h1>
+
+    <form method="post" enctype="multipart/form-data" class="row g-3">
+      {% csrf_token %}
+
+      <div class="col-12">
+        <label for="{{ form.file.id_for_label }}" class="form-label">
+          {{ form.file.label }}
+        </label>
+        {{ form.file }} 
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Cargar Archivo</button>
+      </div>
+    </form>
+
+    {% if errors %}
+      <div class="alert alert-danger mt-4">
+        <ul class="mb-0">
+          {% for err in errors %}
+            <li>{{ err }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    {% elif success %}
+      <div class="alert alert-success mt-4">
+        Validación de archivo exitosa
+      </div>
+    {% endif %}
+  </div>
+
+  
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-…"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
