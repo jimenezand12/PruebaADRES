@@ -1,0 +1,22 @@
+**// IMPORTANTE //*
+
+
+Para la ejecución del script ubicado en la carpeta P2
+denomidado cufe.py
+
+Se debe contar previamente con la instalación de las 
+librerias
+
+from pathlib import Path
+from PyPDF2 import PdfReader
+
+De igual forma las facturas a procesar deben ser ubicadas 
+en la carpeta facturas.
+
+En caso de utilizar un directorio distinto
+actualizar la ruta en el archivo cufe.py, en la linea 26
+
+pdf_dir = Path("facturas")
+
+reemplazando la palabra facturas por el path en el cual 
+se encuentran las facturas
