@@ -7,5 +7,5 @@ En el repositorio encontrará dos carpetas
 
 Para la ejecución de dichos archivos es necesario contar con un ambiente instalado de python y la instalación de Django en su versión 5
 
-Cordialmente
+Cordialmente<br>
 Andersson Jimenez
